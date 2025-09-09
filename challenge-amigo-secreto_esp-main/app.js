@@ -16,5 +16,19 @@ amigos.push(nombre);
 input.value = "";
 
 // Para mostrar la lista actualizada
-mostrarLista();
+ListaAmigos();
+}
+
+function ListaAmigos() {
+  let lista = document.getElementById("listaAmigos");
+
+  // Limpiamos la lista antes de volver a escribirla
+  lista.innerHTML = "";
+
+  // Recorremos el array y agregamos cada nombre como <li>
+  for (let i = 0; i < amigos.length; i++) {
+    let li = document.createElement("li");
+    li.textContent = amigos[i];
+    lista.appendChild(li);
+  }
 }
