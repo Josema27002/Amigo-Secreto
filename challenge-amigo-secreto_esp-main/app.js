@@ -32,3 +32,12 @@ function ListaAmigos() {
     lista.appendChild(li);
   }
 }
+
+
+function sortearAmigos() {
+// Para verificar que haya al menos un nombre en el array
+  if (amigos.length === 0) {
+    alert("No hay amigos para sortear. Por favor, agrega al menos un amigo.");
+    return;
+  }
+}
