@@ -40,4 +40,16 @@ function sortearAmigos() {
     alert("No hay amigos para sortear. Por favor, agrega al menos un amigo.");
     return;
   }
+
+// Para seleccionar un amigo al azar
+let amigoAleatorio = Math.floor(Math.random() * amigos.length);
+let amigoSorteado = amigos[amigoAleatorio];
+
+// Mostrar el resultado
+
+let resultado = document.getElementById("resultado");
+resultado.innerHTML = ""; // Limpiamos resultados anteriores
+let li = document.createElement("li");
+li.textContent = `Tu amigo secreto es: ${amigoSorteado}`;
+resultado.appendChild(li);
 }
